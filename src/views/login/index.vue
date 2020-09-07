@@ -1,6 +1,6 @@
 <template>
-  <div>
-    {{ msg }}
+  <div class="login">
+    1
   </div>
 </template>
 
@@ -15,5 +15,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
