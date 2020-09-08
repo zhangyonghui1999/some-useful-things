@@ -13,7 +13,7 @@
           </el-col>
           <el-col :span="4" class="head-right">
             <span>注销</span>
-            <img src="../../assets/img/Logout.png" alt="">
+            <img src="../../assets/img/Logout.png" alt="" @click="logout">
           </el-col>
         </el-row>
       </el-header>
@@ -75,6 +75,9 @@ export default {
     },
     handleClose (key, keyPath) {
       console.log(key, keyPath)
+    },
+    logout () {
+      this.$router.push('/')
     }
   }
 }
@@ -109,6 +112,7 @@ export default {
               height: 30px;
               width: 30px;
               margin-right: 10px;
+              cursor: pointer;
             }
           }
         }

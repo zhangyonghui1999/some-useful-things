@@ -12,8 +12,15 @@ const routes = [
   },
   {
     path: '/main',
-    name: 'mian',
-    component: () => import('@/views/main')
+    name: 'main',
+    component: () => import('@/views/main'),
+    children: [
+      {
+        path: 'elementui',
+        name: 'elementui',
+        component: () => import('@/views/element')
+      }
+    ]
   }
   // {
   //   path: '/about',

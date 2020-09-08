@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button, Input, Form, FormItem, Tabs, TabPane, Message, Container, Header, Aside, Main, Icon, Row, Col, Select, Option, Menu, Submenu, MenuItem, MenuItemGroup } from 'element-ui'
+import { Button, Input, Form, FormItem, Tabs, TabPane, Message, Container, Header, Aside, Main, Icon, Row, Col, Select, Option, Menu, Submenu, MenuItem, MenuItemGroup, Collapse, CollapseItem } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Input)
@@ -21,5 +21,7 @@ Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
+Vue.use(Collapse)
+Vue.use(CollapseItem)
 
 Vue.prototype.$message = Message
