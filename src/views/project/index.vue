@@ -29,7 +29,7 @@
                 <div class="bottom clearfix">
                   <time class="time">{{ item.currentDate }}</time>
                   <!-- <el-button type="text" class="button">操作按钮</el-button> -->
-                  <a href="javascript;;"></a>
+                  <a :href="item.src" :download="item.fileName" class="button">下载图片</a>
                 </div>
               </div>
             </el-card>
@@ -74,14 +74,14 @@ export default {
       cardList: [
         {
           id: 1,
-          // src: require('@/assets/img/preline.png'),
+          fileName: 'preline',
           src: require('../../assets/img/preline.png'),
           currentDate: new Date(),
           content: 'white-space: pre-line;'
         },
         {
           id: 2,
-          // src: require('@/assets/img/prewrap.png'),
+          fileName: 'prewrap',
           src: require('../../assets/img/prewrap.png'),
           currentDate: new Date(),
           content: 'white-space: pre-wrap;'
@@ -122,6 +122,8 @@ export default {
       line-height: 12px;
     }
     .button {
+      text-decoration: none;
+      cursor: pointer;
       padding: 0;
       float: right;
     }
