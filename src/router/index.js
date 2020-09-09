@@ -19,6 +19,11 @@ const routes = [
         path: 'elementui',
         name: 'elementui',
         component: () => import('@/views/element')
+      },
+      {
+        path: 'project',
+        name: 'project',
+        component: () => import('@/views/project')
       }
     ]
   }
