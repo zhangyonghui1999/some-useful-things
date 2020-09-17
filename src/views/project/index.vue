@@ -39,8 +39,8 @@
       <el-collapse-item title="2. 动态绑定本地图片，src绑定的值，如果不生效，可以使用require引入" name="2">
         <div>require('图片路径')</div>
       </el-collapse-item>
-      <el-collapse-item title="3. 跟客户端的交互" name="3">
-        <div>详情请查看客户端专栏</div>
+      <el-collapse-item title="3. 中英文状态下,文字连续出现不换行情况的处理" name="3">
+        <div>{{ content3 }}</div>
       </el-collapse-item>
       <el-collapse-item title="ELE - 4" name="4">
         <div></div>
@@ -86,7 +86,11 @@ export default {
           currentDate: new Date(),
           content: 'white-space: pre-wrap;'
         }
-      ]
+      ],
+      content3: `解决方式：通过css3的属性：word-break;来设置，word-break共计有3个值
+      1. normal 默认值，使用浏览器默认的换行规则
+      2. break-all 允许在单词内换行
+      3. keep-all 只能在半角空格或连字符处换行`
     }
   },
   methods: {

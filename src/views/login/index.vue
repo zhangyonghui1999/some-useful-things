@@ -54,7 +54,7 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           if (this.loginForm.userName === 'admin' && this.loginForm.password === 'admin') {
-            this.$router.replace({ name: 'home' })
+            this.$router.replace({ path: '/main' })
           } else {
             this.$message.error('用户名或密码错误，请重新输入')
           }
