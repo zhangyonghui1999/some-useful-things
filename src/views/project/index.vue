@@ -42,9 +42,11 @@
       <el-collapse-item title="3. 中英文状态下,文字连续出现不换行情况的处理" name="3">
         <div>{{ content3 }}</div>
       </el-collapse-item>
-      <el-collapse-item title="ELE - 4" name="4">
-        <div></div>
-        <div></div>
+      <el-collapse-item title="4. word-wrap介绍" name="4">
+        <div>{{ content4 }}</div>
+      </el-collapse-item>
+      <el-collapse-item title="5. word-spacing" name="4">
+        <div>增加单词之间的距离(1. 英文状态下单词之间的空隙 2. 中文状态下除非文字之间有空格，否则不起作用)</div>
       </el-collapse-item>
     </el-collapse>
   </div>
@@ -90,7 +92,10 @@ export default {
       content3: `解决方式：通过css3的属性：word-break;来设置，word-break共计有3个值
       1. normal 默认值，使用浏览器默认的换行规则
       2. break-all 允许在单词内换行
-      3. keep-all 只能在半角空格或连字符处换行`
+      3. keep-all 只能在半角空格或连字符处换行`,
+      content4: `css3属性: word-wrap
+      1. 默认值 normal
+      2. break-word 在长单词或url地址内部进行换行`
     }
   },
   methods: {
