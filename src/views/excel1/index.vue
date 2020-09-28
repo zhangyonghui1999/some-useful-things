@@ -90,69 +90,6 @@ export default {
         })
         _this.tableData = _this.tableData.concat(arr)
       }
-    },
-    // importfxx (obj) {
-    //   const _this = this
-    //   // 通过DOM取文件数据
-    //   this.file = obj
-    //   var rABS = false // 是否将文件读取为二进制字符串
-    //   var f = this.file
-    //   var reader = new FileReader()
-    //   FileReader.prototype.readAsBinaryString = function (f) {
-    //     var binary = ''
-    //     var rABS = false // 是否将文件读取为二进制字符串
-    //     // var pt = this
-    //     var wb // 读取完成的数据
-    //     var outdata
-    //     var reader = new FileReader()
-    //     reader.onload = function (e) {
-    //       console.log('reader.result', reader.result)
-    //       var bytes = new Uint8Array(reader.result)
-    //       console.log('bytes', bytes)
-    //       var length = bytes.byteLength
-    //       for (var i = 0; i < length; i++) {
-    //         binary += String.fromCharCode(bytes[i])
-    //       }
-    //       console.log('binary', binary)
-    //       var XLSX = require('xlsx')
-    //       if (rABS) {
-    //         wb = XLSX.read(btoa(this.fixdata(binary)), { // 手动转化
-    //           type: 'base64'
-    //         })
-    //       } else {
-    //         wb = XLSX.read(binary, {
-    //           type: 'binary'
-    //         })
-    //       }
-    //       console.log('wb', wb)
-    //       outdata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]])// outdata就是读取excel内容之后输出的东西
-    //       this.da = [...outdata]
-    //       const arr = []
-    //       this.da.map(v => {
-    //         const obj = {}
-    //         obj.IP = v.IP // ip是表的标题
-    //         obj.NAME = v.NAME
-    //         arr.push(obj)
-    //       })
-    //       // return arr
-    //       // 把读取的excel表格中的内容放进tableData2中(这里要改成自己的表的名字)
-    //       _this.tableData2 = _this.tableData2.concat(arr)
-    //     }
-    //     reader.readAsArrayBuffer(f)
-    //   }
-    //   if (rABS) {
-    //     reader.readAsArrayBuffer(f)
-    //   } else {
-    //     reader.readAsBinaryString(f)
-    //   }
-    // },
-    fixdata (data) { // 文件流转BinaryString
-      var o = ''
-      let l = 0
-      const w = 10240
-      for (; l < data.byteLength / w; ++l) o += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w, l * w + w)))
-      o += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w)))
-      return o
     }
   }
 }
