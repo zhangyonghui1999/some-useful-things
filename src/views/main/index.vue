@@ -35,8 +35,18 @@
                 <i class="el-icon-location"></i>
                 <span>PROJECT PIT</span>
               </template>
-              <el-menu-item index="1-1">ELEMENT UI</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item index="1-1">
+                <template>
+                  <i class="fas fa-user fa-lg"></i>
+                  <span>ELEMENT UI</span>
+                </template>
+              </el-menu-item>
+              <el-menu-item index="1-2">
+                <template>
+                  <i class="fab fa-alipay fa-lg"></i>
+                  <span>选项2</span>
+                </template>
+              </el-menu-item>
             </el-submenu>
             <!-- <el-menu-item index="2">
               <i class="el-icon-menu"></i>
@@ -84,6 +94,10 @@ export default {
 </script>
 
 <style lang="scss">
+  .fas, .fab {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
   .main {
     height: 100%;
     .el-container {
@@ -126,6 +140,10 @@ export default {
           .el-menu {
             height: 100%;
             width: 200px;
+            background-color: #000 !important;
+          }
+          .el-submenu__title, .el-menu-item {
+            background-color: #000 !important;
           }
         }
         .el-main {
