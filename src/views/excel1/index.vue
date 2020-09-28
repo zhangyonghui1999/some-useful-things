@@ -33,7 +33,6 @@ export default {
       tableData: [],
       fileContent: '',
       file: '',
-      // newadd
       data: ''
     }
   },
@@ -50,7 +49,7 @@ export default {
       const fileType = fileName.substring(fileName.lastIndexOf('.') + 1)
       if (this.fileContent) {
         if (fileType === 'xlsx' || fileType === 'xls') {
-          this.importfxx(this.fileContent)
+          this.importfile(this.fileContent)
         } else {
           this.$message({
             type: 'warning',
@@ -64,7 +63,7 @@ export default {
         })
       }
     },
-    importfxx (obj) {
+    importfile (obj) {
       const reader = new FileReader()
       const _this = this
       reader.readAsArrayBuffer(obj)
