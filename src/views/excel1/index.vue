@@ -6,10 +6,10 @@
       :on-change="handleChange"
       :show-file-list="false"
       :auto-upload="false">
-      <el-button size="small" type="primary" >读取excel文件</el-button>
+      <el-button size="small" type="primary" style="margin-bottom:15px;">读取excel文件</el-button>
     </el-upload>
     <el-table
-      :data="tableData2"
+      :data="tableData"
       style="width: 100%">
       <el-table-column prop="ip" label="序号" width="180">
       </el-table-column>
@@ -30,8 +30,8 @@ export default {
   name: 'excel',
   data () {
     return {
-      tableData2: [],
-      fileTemp: '',
+      tableData: [],
+      fileContent: '',
       file: '',
       // newadd
       data: ''
@@ -45,12 +45,12 @@ export default {
       console.log('handleDelete', item)
     },
     handleChange (file, fileList) {
-      this.fileTemp = file.raw
+      this.fileContent = file.raw
       const fileName = file.name
       const fileType = fileName.substring(fileName.lastIndexOf('.') + 1)
-      if (this.fileTemp) {
+      if (this.fileContent) {
         if (fileType === 'xlsx' || fileType === 'xls') {
-          this.importfxx(this.fileTemp)
+          this.importfxx(this.fileContent)
         } else {
           this.$message({
             type: 'warning',
@@ -89,7 +89,7 @@ export default {
           obj.name = v.NAME
           arr.push(obj)
         })
-        _this.tableData2 = _this.tableData2.concat(arr)
+        _this.tableData = _this.tableData.concat(arr)
       }
     },
     // importfxx (obj) {
