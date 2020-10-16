@@ -39,6 +39,21 @@ const routes = [
         path: 'excel1',
         name: 'excel1',
         component: () => import('@/views/excel1')
+      },
+      {
+        path: 'test',
+        name: 'testComponent',
+        component: () => import('@/views/testComponent')
+      },
+      {
+        path: '/bfc',
+        name: 'bfc',
+        component: () => import('@/views/bfc')
+      },
+      {
+        path: '/rem',
+        name: 'rem',
+        component: () => import('@/views/rem')
       }
     ]
   }
