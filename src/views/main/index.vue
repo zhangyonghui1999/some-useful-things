@@ -55,6 +55,38 @@
               <i class="el-icon-setting"></i>
               <span slot="title">导航四</span>
             </el-menu-item> -->
+            <el-submenu index="3">
+              <template slot="title">
+                <i class="fab fa-js-square fa-lg"></i>
+                <span slot="title">你不知道的JS</span>
+              </template>
+              <el-menu-item index="/main/kownJS">
+                <i class="fab fa-js fa-lg"></i>
+                <span>上册</span>
+              </el-menu-item>
+            </el-submenu>
+
+            <el-submenu index="4">
+              <template slot="title">
+                <i class="fab fa-js-square fa-lg"></i>
+                <span slot="title">Vue Error</span>
+              </template>
+              <el-menu-item index="/main/vueerror">
+                <i class="fab fa-js fa-lg"></i>
+                <span>Errors</span>
+              </el-menu-item>
+            </el-submenu>
+
+            <el-submenu index="5">
+              <template slot="title">
+                <i class="fas fa-cookie fa-lg"></i>
+                <span slot="title">cookie</span>
+              </template>
+              <el-menu-item index="/main/cookie">
+                <i class="fas fa-cookie fa-lg"></i>
+                <span>cookie</span>
+              </el-menu-item>
+            </el-submenu>
           </el-menu>
         </el-aside>
         <el-main>

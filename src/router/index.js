@@ -18,42 +18,62 @@ const routes = [
       {
         path: 'elementui',
         name: 'elementui',
-        component: () => import('@/views/element')
+        component: () => import(/* webpackChunkName: "elementui" */ '@/views/element')
       },
       {
         path: 'project',
         name: 'project',
-        component: () => import('@/views/project')
+        component: () => import(/* webpackChunkName: "project" */ '@/views/project')
       },
       {
         path: 'apps',
         name: 'apps',
-        component: () => import('@/views/apps')
+        component: () => import(/* webpackChunkName: "apps" */ '@/views/apps')
       },
       {
         path: 'excel',
         name: 'excel',
-        component: () => import('@/views/excel')
+        component: () => import(/* webpackChunkName: "excel" */ '@/views/excel')
       },
       {
         path: 'excel1',
         name: 'excel1',
-        component: () => import('@/views/excel1')
+        component: () => import(/* webpackChunkName: "excel1" */ '@/views/excel1')
       },
       {
         path: 'test',
         name: 'testComponent',
-        component: () => import('@/views/testComponent')
+        component: () => import(/* webpackChunkName: "testComponent" */ '@/views/testComponent')
       },
       {
         path: '/bfc',
         name: 'bfc',
-        component: () => import('@/views/bfc')
+        component: () => import(/* webpackChunkName: "bfc" */ '@/views/bfc')
       },
       {
         path: '/rem',
         name: 'rem',
-        component: () => import('@/views/rem')
+        component: () => import(/* webpackChunkName: "rem" */ '@/views/rem')
+      },
+      {
+        path: 'kownJS',
+        name: 'kownJS',
+        component: () => import(/* webpackChunkName: "kownJS" */ '@/views/YOUDONTKOWNJS')
+      },
+      {
+        path: 'vueerror',
+        name: 'vueerror',
+        component: () => import(/* webpackChunkName: "vueerror" */ '@/views/VueError')
+      },
+      {
+        path: 'test1',
+        name: 'test1',
+        component: () => import(/* webpackChunkName: "test1" */ '@/views/deleteTest')
+      },
+      {
+        path: 'cookie',
+        name: 'cookie',
+        component: () => import(/* webpackChunkName: "cookie" */ '@/views/cookie')
       }
     ]
   }

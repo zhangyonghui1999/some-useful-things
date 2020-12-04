@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+import config from '@/utils/host'
 export default {
   data () {
     return {
@@ -42,6 +44,9 @@ export default {
       }
     }
   },
+  created () {
+    console.log('VUE_APP_BASE_API', process.env.VUE_APP_BASE_API)
+  },
   methods: {
     handleClick (tab, event) {
       if (event.target.innerText === '用户管理') {
@@ -51,6 +56,15 @@ export default {
       }
     },
     login () {
+      // 通过全局变量形式获取
+      // axios.get(`${process.env.VUE_APP_BASE_API}/org/list`).then(res => {
+      //   console.log(res)
+      //   return
+      // })
+      axios.get(`${config.host}/index.html`).then(res => {
+        console.log(res)
+        return
+      })
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           if (this.loginForm.userName === 'admin' && this.loginForm.password === 'admin') {

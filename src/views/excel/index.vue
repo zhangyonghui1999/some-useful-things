@@ -1,7 +1,7 @@
 <template>
   <div class="excel">
     <!-- 已实现基本功能，此版本为初级版本，后续升级版本均为在本版本基础上升级改造 -->
-    <el-upload
+    <!-- <el-upload
       class="upload-demo"
       action=""
       :on-change="handleChange"
@@ -21,7 +21,7 @@
       </el-table-column>
       <el-table-column label="操作">
       </el-table-column>
-    </el-table>
+    </el-table> -->
     <!-- :file-list="fileListUpload" -->
     <!-- :limit="limitUpload" -->
   </div>

@@ -1,6 +1,10 @@
 <template>
   <div>
-    {{ msg }}
+    <van-button type="primary">主要按钮</van-button>
+    <van-cell-group>
+      <van-cell title="单元格" value="内容" />
+      <van-cell title="单元格" value="内容" label="描述信息" />
+    </van-cell-group>
   </div>
 </template>
 
@@ -15,10 +19,16 @@ export default {
 </script>
 
 <style lang="scss">
-  @function px2rem($value){
-    @return $value * 0.02rem
-  }
-  div {
-    font-size: px2rem(10);
-  }
+div {
+  font-size: 16px;
+}
+.van-button {
+  font-size: 20px;
+}
+  // @function px2rem($value){
+  //   @return $value * 0.02rem
+  // }
+  // div {
+  //   font-size: px2rem(10);
+  // }
 </style>
