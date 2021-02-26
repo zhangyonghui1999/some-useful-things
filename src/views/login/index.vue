@@ -16,6 +16,8 @@
             <el-input v-model.trim="loginForm.password" placeholder="请输入您的用户密码"></el-input>
           </el-form-item>
           <el-button type="primary" @click="login" class="btn">登录</el-button>
+          <!-- <div @click="add">{{ count }}</div> -->
+          <!-- <div @click="EVERY_MUTATION(payload)">{{ dollar }}</div> -->
         </el-form>
       </section>
     </div>
@@ -23,8 +25,9 @@
 </template>
 
 <script>
-import axios from 'axios'
-import config from '@/utils/host'
+// import axios from 'axios'
+// import config from '@/utils/host'
+// import { mapState, mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -34,6 +37,11 @@ export default {
         userName: '',
         password: ''
       },
+      payload: {
+        count: 1,
+        dollar: 2
+      },
+      count: 10,
       loginRules: {
         userName: [
           { required: true, message: '请输入用户姓名', trigger: 'blur' }
@@ -44,10 +52,37 @@ export default {
       }
     }
   },
-  created () {
-    console.log('VUE_APP_BASE_API', process.env.VUE_APP_BASE_API)
-  },
+  // created () {
+  //   console.log('VUE_APP_BASE_API', process.env.VUE_APP_BASE_API)
+  // },
+  // computed: {
+  //   count () {
+  //     console.log(this.$store)
+  //   }
+  // },
+  // computed: mapState({
+  //   count: state => {
+  //     console.log('state', state)
+  //     console.log('state.count', state.count)
+  //   },
+  //   countAlias: 'count',
+  //   dollar: state => {
+  //     console.log(state.count + state.dollar)
+  //   }
+  // }),
+  // computed: mapState([
+  //   'count',
+  //   'dollar'
+  // ]),
   methods: {
+    // add () {
+    //   console.log('this.$store.state.a', this.$store.state.a)
+    //   console.log('123', this.$store)
+    // },
+    // ...mapMutations([
+    //   'SOME_MUTATION',
+    //   'EVERY_MUTATION'
+    // ]),
     handleClick (tab, event) {
       if (event.target.innerText === '用户管理') {
         this.tabStatus = true
@@ -61,19 +96,20 @@ export default {
       //   console.log(res)
       //   return
       // })
-      axios.get(`${config.host}/index.html`).then(res => {
-        console.log(res)
-        return
-      })
-      this.$refs.loginForm.validate(valid => {
-        if (valid) {
-          if (this.loginForm.userName === 'admin' && this.loginForm.password === 'admin') {
-            this.$router.replace({ path: '/main' })
-          } else {
-            this.$message.error('用户名或密码错误，请重新输入')
-          }
-        }
-      })
+      // axios.get(`${config.host}/index.html`).then(res => {
+      //   console.log(res)
+      //   return
+      // })
+      // this.$refs.loginForm.validate(valid => {
+      //   if (valid) {
+      //     if (this.loginForm.userName === 'admin' && this.loginForm.password === 'admin') {
+      //       this.$router.replace({ path: '/main' })
+      //     } else {
+      //       this.$message.error('用户名或密码错误，请重新输入')
+      //     }
+      //   }
+      // })
+      window.location.href = `https://test.bitstore360.com/bitStore-frontend/bitstore/index.html#/buyWaiting?orderNo=BUY1365149602763902976`
     }
   }
 }

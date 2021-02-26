@@ -1,4 +1,4 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = {
   devServer: {
     proxy: 'http://localhost:5000'
@@ -63,14 +63,14 @@ module.exports = {
     }
   },
   // 通过这种方式设置的对象将会被webpack-merge合并入最终的webpack配置
-  configureWebpack: {
-    plugins: [
-      new BundleAnalyzerPlugin()
-    ]
-  },
-  chainWebpack (config) {
+  // configureWebpack: {
+  //   plugins: [
+  //     new BundleAnalyzerPlugin()
+  //   ]
+  // },
+  // chainWebpack (config) {
 
-  },
+  // },
   // chainWebpack(config) {
   //   console.log(config.plugins, 'config+++++++++++++++++++++++++++++++++')
   //   config.plugins[BundleAnalyzerPlugin]
