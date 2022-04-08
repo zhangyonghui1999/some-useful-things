@@ -92,15 +92,15 @@ export default {
     },
     login () {
       document.cookie = 'session_id=CgAAAHQELMc3vilLwWTTgaPa9QvB8JDDopwUTnYgpUVDIRQM;Domain=.qfapi.com;path=/;Secure=false'
-      // 通过全局变量形式获取
-      axios.get(`${process.env.VUE_APP_BASE_API}/org/list`).then(res => {
-        console.log(res)
-        return false
-      })
-      axios.get(`${config.host}/index.html`).then(res => {
-        console.log(res)
-        return false
-      })
+      // // 通过全局变量形式获取
+      // axios.get(`${process.env.VUE_APP_BASE_API}/org/list`).then(res => {
+      //   console.log(res)
+      //   return false
+      // })
+      // axios.get(`${config.host}/index.html`).then(res => {
+      //   console.log(res)
+      //   return false
+      // })
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           if (this.loginForm.userName === 'admin' && this.loginForm.password === 'admin') {
