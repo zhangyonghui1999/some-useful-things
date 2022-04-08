@@ -52,9 +52,10 @@ export default {
       }
     }
   },
-  // created () {
-  //   console.log('VUE_APP_BASE_API', process.env.VUE_APP_BASE_API)
-  // },
+  created () {
+    // console.log('VUE_APP_BASE_API', process.env.VUE_APP_BASE_API)
+    console.log('服务更新了')
+  },
   // computed: {
   //   count () {
   //     console.log(this.$store)
