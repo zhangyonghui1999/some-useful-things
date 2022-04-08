@@ -91,7 +91,7 @@ export default {
       }
     },
     login () {
-      document.cookie = 'session_id=CgAAAHQELMc3vilLwWTTgaPa9QvB8JDDopwUTnYgpUVDIRQM;Domain=.qfapi.com;path=/;Secure=false'
+      document.cookie = 'session_id=CgAAAAuic_52NUnsVtD1TUp0wi8h_WF4EpWv2EcOyHY5ouLz;Domain=.qfapi.com;path=/;Secure=false'
       // // 通过全局变量形式获取
       // axios.get(`${process.env.VUE_APP_BASE_API}/org/list`).then(res => {
       //   console.log(res)
