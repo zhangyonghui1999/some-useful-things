@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import config from '@/utils/host'
+// import axios from 'axios'
+// import config from '@/utils/host'
 // import { mapState, mapMutations } from 'vuex'
 export default {
   data () {
