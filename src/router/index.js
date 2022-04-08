@@ -74,6 +74,21 @@ const routes = [
         path: 'cookie',
         name: 'cookie',
         component: () => import(/* webpackChunkName: "cookie" */ '@/views/cookie')
+      },
+      {
+        path: 'treesOrcheckbox',
+        name: 'treesOrcheckbox',
+        component: () => import(/* webpackChunkName: "checkbox" */ '@/views/treesOrcheckbox')
+      },
+      {
+        path: 'xterm',
+        name: 'xterm',
+        component: () => import(/* webpackChunkName: "xterm" */ '@/views/xterm')
+      },
+      {
+        path: 'queryNum',
+        name: 'queryNum',
+        component: () => import(/* webpackChunkName: "queryNum" */ '@/views/queryNum')
       }
     ]
   }

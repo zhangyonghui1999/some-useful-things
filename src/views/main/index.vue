@@ -87,6 +87,17 @@
                 <span>cookie</span>
               </el-menu-item>
             </el-submenu>
+
+            <el-submenu index="6">
+              <template slot="title">
+                <i class="fas fa-camera-retro fa-lg"></i>
+                <span slot="title">queryExcelName</span>
+              </template>
+              <el-menu-item index="/main/queryNum">
+                <i class="fas fa-camera-retro fa-lg"></i>
+                <span>queryExcelName</span>
+              </el-menu-item>
+            </el-submenu>
           </el-menu>
         </el-aside>
         <el-main>

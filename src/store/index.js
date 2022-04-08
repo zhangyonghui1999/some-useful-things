@@ -45,7 +45,7 @@ const moduleB = {
 export default new Vuex.Store({
   modules: {
     a: moduleA,
-    b: moduleB,
+    b: moduleB
   },
   state: {
     count: 1,
@@ -63,7 +63,7 @@ export default new Vuex.Store({
     increment (context) {
       context.commit('increment')
     }
-  },
+  }
   // modules: {
   // }
 })

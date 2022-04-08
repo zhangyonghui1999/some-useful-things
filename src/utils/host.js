@@ -3,8 +3,8 @@ let host = ''
 if (env === 'development') {
   host = 'api'
 } else {
-  let u = location.hostname
-  let pro = location.protocol
+  const u = location.hostname
+  const pro = location.protocol
   host = `${pro}//${u}`
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="excel">
-    <!-- <el-upload
+    <el-upload
       class="upload-demo"
       action=""
       :on-change="handleChange"
@@ -21,7 +21,7 @@
           <a @click="handelEdit(scope)">修改</a>
         </template>
       </el-table-column>
-    </el-table> -->
+    </el-table>
   </div>
 </template>
 
@@ -64,6 +64,7 @@ export default {
       }
     },
     importfile (obj) {
+      this.tableData = []
       const reader = new FileReader()
       const _this = this
       reader.readAsArrayBuffer(obj)

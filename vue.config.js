@@ -1,26 +1,26 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = {
-  devServer: {
-    proxy: 'http://localhost:5000'
-    // host: '0.0.0.0',
-    // port: 8080,
-    // open: true,
-    // overlay: {
-    //   warnings: false,
-    //   errors: true
-    // },
-    // proxy: 'http://192.168.43.176:3000'
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://localhost:3000',
-    //     ws: true,
-    //     changeOrigin: true,
-    //     pathRewrite: {
-    //       '^/api': ''
-    //     }
-    //   }
-    // }
-  },
+  // devServer: {
+  //   // proxy: 'http://localhost:5000'
+  //   // host: '0.0.0.0',
+  //   // port: 8080,
+  //   // open: true,
+  //   // overlay: {
+  //   //   warnings: false,
+  //   //   errors: true
+  //   // },
+  //   // proxy: 'http://192.168.43.176:3000'
+  //   // proxy: {
+  //   //   '/api': {
+  //   //     target: 'http://localhost:3000',
+  //   //     ws: true,
+  //   //     changeOrigin: true,
+  //   //     pathRewrite: {
+  //   //       '^/api': ''
+  //   //     }
+  //   //   }
+  //   // }
+  // },
   publicPath: '',
   // outputDir: 'build', // 更改构建文件输出目录
   // assetsDir: 'assets-myown', // 设置构建文件静态资源存放目录
